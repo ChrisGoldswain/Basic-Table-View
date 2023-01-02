@@ -34,21 +34,30 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setVideo(video: video)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController{
+            let video = videos[indexPath.row]
+            vc.img = video.image
+            vc.ryan_text = video.title
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
 
 extension ViewController {
     
     func fetchData() -> [Video] {
-        let video1 = Video(image: Images.one, title: "1")
-        let video2 = Video(image: Images.two, title: "2")
-        let video3 = Video(image: Images.three, title: "3")
-        let video4 = Video(image: Images.four, title: "4")
-        let video5 = Video(image: Images.five, title: "5")
-        let video6 = Video(image: Images.six, title: "6")
-        let video7 = Video(image: Images.seven, title: "7")
-        let video8 = Video(image: Images.eight, title: "8")
-        let video9 = Video(image: Images.nine, title: "9")
-        let video10 = Video(image: Images.ten, title: "10")
+        let video1 = Video(image: Images.one, title: "Hello")
+        let video2 = Video(image: Images.two, title: "Ryan")
+        let video3 = Video(image: Images.three, title: "I hope")
+        let video4 = Video(image: Images.four, title: "you")
+        let video5 = Video(image: Images.five, title: "had")
+        let video6 = Video(image: Images.six, title: "a fun")
+        let video7 = Video(image: Images.seven, title: "weekend")
+        let video8 = Video(image: Images.eight, title: "with")
+        let video9 = Video(image: Images.nine, title: "your buddy")
+        let video10 = Video(image: Images.ten, title: "Craig!")
         
         return [video1, video2, video3, video4, video5, video6, video7, video8, video9, video10]
     }
