@@ -4,7 +4,7 @@ Basic table view
 This is a basic table view app. It was adapted from a tutorial for building a table view for videos (basically, an image and a title). 
 A cell tap pushes to a detail view of the image and title.
 
-Tabel View screenshot:
+Table View screenshot:
 ![Table View](https://user-images.githubusercontent.com/120228798/228647168-6daa204e-5d14-4028-a07d-b8158a3eecea.png)
 
 Detail View screenshot:
