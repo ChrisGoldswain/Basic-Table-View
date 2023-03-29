@@ -19,5 +19,4 @@ struct Images {
     static let eight = UIImage(named: "8")!
     static let nine = UIImage(named: "9")!
     static let ten = UIImage(named: "10")!
-
 }

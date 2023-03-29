@@ -36,7 +36,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let vc = storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController{
+        if let vc = storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController {
             let video = videos[indexPath.row]
             vc.img = video.image
             vc.ryan_text = video.title
